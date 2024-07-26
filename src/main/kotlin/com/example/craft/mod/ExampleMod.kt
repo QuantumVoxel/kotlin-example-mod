@@ -4,9 +4,7 @@ import com.example.craft.mod.init.ModBlocks
 import com.example.craft.mod.init.ModItems
 import dev.ultreon.quantum.ModInit
 import dev.ultreon.quantum.events.PlayerEvents
-import dev.ultreon.quantum.server.player.ServerPlayer
 import dev.ultreon.quantum.text.TextObject
-import dev.ultreon.quantum.text.TextStyle
 import dev.ultreon.quantum.util.RgbColor
 
 class ExampleMod : ModInit {
