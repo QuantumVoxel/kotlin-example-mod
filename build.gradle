@@ -1,0 +1,60 @@
+plugins {
+    id 'maven-publish'
+    id 'org.jetbrains.kotlin.jvm' version '2.0.0'
+    id 'dev.ultreon.photon' version '0.1.0'
+}
+
+photon {
+    production = true
+    modProject = project
+
+    // Set your properties in the gradle.properties file
+    projectName = property("mod_displayName")
+    projectVersion = property("mod_version")
+    projectGroup = property("mod_group")
+    projectId = property("mod_name")
+    javaVersion = 21
+}
+
+group = photon.projectGroup
+version = photon.projectVersion
+
+base {
+    archivesName = photon.projectId
+}
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    quantum photon.client(property("versions_quantum").toString())
+
+    testImplementation platform('org.junit:junit-bom:5.10.0')
+    testImplementation 'org.junit.jupiter:junit-jupiter'
+}
+
+test {
+    useJUnitPlatform()
+}
+
+processResources {
+    filesMatching('fabric.mod.json') {
+        expand(project.properties)
+    }
+}
+
+publishing {
+    publications {
+        maven(MavenPublication) {
+            from components.java
+        }
+    }
+
+    repositories {
+        mavenLocal()
+
+        // Add your repository here
+        // maven { url "https://myrepo.example.com/releases" }
+    }
+}
