@@ -29,6 +29,7 @@
     "example-mod.mixins.json"
   ],
   "depends": {
-    "fabricloader": ">=0.15.0"
+    "fabricloader": ">=0.15.0",
+    "quantum": "0.1.0"
   }
 }
