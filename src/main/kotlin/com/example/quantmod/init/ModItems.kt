@@ -1,6 +1,6 @@
-package com.example.craft.mod.init
+package com.example.quantmod.init
 
-import com.example.craft.mod.ExampleMod
+import com.example.quantmod.ExampleMod
 import dev.ultreon.quantum.item.BlockItem
 import dev.ultreon.quantum.item.Item
 import dev.ultreon.quantum.registry.DeferRegistry

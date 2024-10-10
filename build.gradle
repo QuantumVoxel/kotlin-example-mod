@@ -25,6 +25,7 @@ base {
 
 repositories {
     mavenCentral()
+    maven { url "https://jitpack.io/" }
 }
 
 dependencies {
@@ -32,6 +33,8 @@ dependencies {
 
     testImplementation platform('org.junit:junit-bom:5.10.0')
     testImplementation 'org.junit.jupiter:junit-jupiter'
+
+    implementation 'net.fabricmc:fabric-language-kotlin:1.12.2+kotlin.2.0.20', { transitive false }
 }
 
 test {

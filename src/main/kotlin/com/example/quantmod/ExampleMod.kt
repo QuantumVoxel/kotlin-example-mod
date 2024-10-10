@@ -1,13 +1,19 @@
-package com.example.craft.mod
+package com.example.quantmod
 
-import com.example.craft.mod.init.ModBlocks
-import com.example.craft.mod.init.ModItems
-import dev.ultreon.quantum.ModInit
+import com.example.quantmod.init.ModBlocks
+import com.example.quantmod.init.ModItems
 import dev.ultreon.quantum.events.PlayerEvents
 import dev.ultreon.quantum.text.TextObject
+import dev.ultreon.quantum.util.NamespaceID
 import dev.ultreon.quantum.util.RgbColor
+import net.fabricmc.api.ModInitializer
 
-class ExampleMod : ModInit {
+val String.exampleMod: NamespaceID
+    get() = NamespaceID(ExampleMod.MOD_ID, this)
+
+object ExampleMod : ModInitializer {
+    const val MOD_ID: String = "example_mod"
+
     override fun onInitialize() {
         ModBlocks.register()
         ModItems.register()
@@ -17,9 +23,5 @@ class ExampleMod : ModInit {
                 style.color(RgbColor.rgb(0xff0000))
             })
         }
-    }
-
-    companion object {
-        const val MOD_ID: String = "example_mod"
     }
 }
