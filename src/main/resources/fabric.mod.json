@@ -1,35 +1,19 @@
 {
   "schemaVersion": 1,
-  "id": "example_mod",
-  "version": "0.1.0",
-  "name": "Example Mod",
+  "id": "examplemod",
+  "version": "${version}",
+  "name": "Example Quantum Voxel Mod",
   "description": "",
   "authors": [
-    {
-      "name": "Example Author"
-    }
+    "Your Name Here"
   ],
-  "license": "CC0",
-  "environment": "*",
+  "mixins": [
+    "examplemod.mixins.json",
+    "examplemod.client.mixins.json"
+  ],
   "entrypoints": {
     "main": [
-      {
-        "adapter": "kotlin",
-        "value": "com.example.quantmod.ExampleMod"
-      }
-    ],
-    "client": [
-      {
-        "adapter": "kotlin",
-        "value": "com.example.quantmod.client.ExampleModClient"
-      }
+      "org.example.ExampleMod"
     ]
-  },
-  "mixins": [
-    "example-mod.mixins.json"
-  ],
-  "depends": {
-    "fabricloader": ">=0.15.0",
-    "quantum": "0.1.0"
   }
 }
