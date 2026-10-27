@@ -11,9 +11,21 @@
     "examplemod.mixins.json",
     "examplemod.client.mixins.json"
   ],
+  "depends": {
+    "fabric-language-kotlin": "*"
+  },
   "entrypoints": {
     "main": [
-      "org.example.ExampleMod"
+      {
+        "adapter": "kotlin",
+        "value": "org.example.ExampleMod"
+      }
+    ],
+    "client": [
+      {
+        "adapter": "kotlin",
+        "value": "org.example.client.ExampleModClient"
+      }
     ]
   }
 }
