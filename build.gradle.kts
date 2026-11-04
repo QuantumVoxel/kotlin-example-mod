@@ -9,7 +9,7 @@ group = "org.example"
 version = "1.0-SNAPSHOT"
 
 photon {
-    gameVersion = "0.1.0-alpha.2026.10.27"
+    gameVersion = "0.1.0-alpha.2026.11.03"
     splitClientSources = true
     generateSources = true
     generateJavadoc = true
